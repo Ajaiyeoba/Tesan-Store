@@ -8,54 +8,57 @@ let products = [
     {
         id: 1,
         name: 'Product 1',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     },
     {
         id: 2,
         name: 'Product 2',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     },
     {
         id: 3,
         name: 'Product 3',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     },
     {
         id: 4,
         name: 'Product 4',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     },
     {
         id: 5,
         name: 'Product 5',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     },
     {
         id: 6,
         name: 'Product 6',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     },
     {
         id: 7,
         name: 'Product 7',
-        image:'',
+        image:'assets\bag.png',
         price: 40000 
     }
 ];
 
-let listCard = []
+let listCard = [];
     function initApp(){
-        products.forEach((value, key)=>
+        products.forEach((value, key) =>{ 
         let newDiv = document.createElement('div');
-        newDiv.innerHtml = '
-        <img src="image/${value.image}" />
-        ';
+        newDiv.innerHTML = "   
+        <img src='asset/${value.image}' />
+        <div class='title'>${value.name}</div>
+        <div class='price'>${value.price.toLocaleString()}</div>
+        ";
         list.appendChild(newDiv);
-        )
+    })
     }
+    initApp();
